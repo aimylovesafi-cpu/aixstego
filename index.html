@@ -16,10 +16,22 @@
 
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 
+<!-- iOS Fullscreen -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="AIxMUSIC">
+<link rel="apple-touch-icon" href="/logo.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/logo.png">
+
+<!-- Android + PWA -->
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#050510">
+<link rel="manifest" href="/manifest.json">
   
-  <meta property="og:title" content="AIxFACTORY - Steganography Tool">
+<meta property="og:title" content="AIxFACTORY - Steganography Tool">
 <meta property="og:description" content="Securely hide data inside images using LSB - AI readable, eye invisible">
 <meta property="og:image" content="https://aixstego-qyhq.onrender.com/logo.png">
 <meta property="og:url" content="https://aixstego-qyhq.onrender.com">
@@ -29,7 +41,7 @@
 <meta name="twitter:image" content="https://aixstego-qyhq.onrender.com/logo.png">
   
   
-  <title>AIxFACTORY - Steganography Tool</title>
+<title>AIxFACTORY - Steganography Tool</title>
 <style>
 *{box-sizing:border-box;font-family:Inter,Segoe UI,sans-serif}
 body{margin:0;background:#070a14;color:#fff;min-height:100vh;display:flex;flex-direction:column;align-items:center}
@@ -201,5 +213,12 @@ decodeBtn.onclick = () => {
   }
 };
 </script>
+
+<script>
+if('serviceWorker' in navigator){
+ navigator.serviceWorker.register('/sw.js');
+}
+</script>
+
 </body>
 </html>
